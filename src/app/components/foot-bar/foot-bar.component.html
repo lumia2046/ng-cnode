@@ -1,0 +1,5 @@
+<ul>
+  <li *ngFor="let item of items">
+    <a [routerLink]='item.link' (click)='setActive(item.link)' [class.active]='item.link===activeLink'>{{item.title}}</a>
+  </li>
+</ul>

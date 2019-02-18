@@ -1,0 +1,6 @@
+1.获取路由参数
+  constructor(private route:ActivatedRoute) { }
+  ngOnInit() {
+    this.route.params.subscribe((params:Params)=>{})
+  }
+
