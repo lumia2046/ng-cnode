@@ -2,7 +2,7 @@
   <li *ngFor="let item of items"
   [class.active]="item.link === activeLink"
   >
-    <a [routerLink]="item.link" (click)="setActive(item.link)">
+    <a [routerLink]="'../'+item.link" (click)="setActive(item.link)">
       {{item.title}}
     </a>
   </li>
