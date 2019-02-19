@@ -1,4 +1,4 @@
-<div class='item'>
+<div class='item' (click)='handleClick()'>
   <img [src]='info.author.avatar_url' class='avatar'>
   <div class='head'>
     <p class='username'>{{info.author.loginname}}</p>
@@ -9,8 +9,8 @@
   </div>
   <h2 class='title'>{{info.title}}</h2>
   <div class='foot'>
-    <span class='footItem'>查看量{{info.visit_count}}</span>
-    <span class='footItem'>回复量{{info.reply_count}}</span>
+    <span class='footItem'>查看量 {{info.visit_count}}</span>
+    <span class='footItem'>回复量 {{info.reply_count}}</span>
     <span class='footItem'>{{info.last_reply_at|formatData}}</span>
   </div>
 </div>

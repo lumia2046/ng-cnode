@@ -1,0 +1,29 @@
+.head{
+  height: 60px;
+  line-height: 60px;
+  padding: 0 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.img{
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user_name{
+  margin-right: 10px;
+}
+
+.publish_data{
+  color: #ccc;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.right{
+  float: right;
+  height: 60px;
+  line-height: 60px;
+}

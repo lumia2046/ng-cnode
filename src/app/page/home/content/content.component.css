@@ -1,3 +1,13 @@
 .itemList{
+  position: absolute;
+  top:43px;
+  bottom: 42px;
+  width: 100%;
   background: #ccc;
+  overflow: auto;
+}
+
+.null{
+  padding: 20px;
+  text-align: center;
 }

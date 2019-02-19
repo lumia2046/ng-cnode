@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, ParamMap, Params } from '@angular/router';
 import { LinkItem } from '../../interface/LinkItem';
 
 @Component({
@@ -23,9 +24,10 @@ export class FootBarComponent implements OnInit {
       title: '我的',
     },
   ]
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.activeLink = `/${this.route.snapshot.routeConfig.path}`
   }
 
   setActive(link: string): void {

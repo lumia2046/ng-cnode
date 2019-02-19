@@ -63,13 +63,9 @@ export class HeadBarComponent implements OnInit {
   setActive(link: string) {
     this.activeLink = link;
     console.log(this.route.snapshot.paramMap)
-    this.test('aaa')
-    // this.getTopics({ tab: link === 'all' ? null : link })
 
-    // this.route.params.subscribe((params:Params)=>{
-    //   console.log(params)
-    //   this.activeLink = params["tabName"]
-    // })
+    this.getTopics({ tab: link === 'all' ? null : link })
+
   }
 
 

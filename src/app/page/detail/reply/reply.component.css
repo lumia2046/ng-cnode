@@ -1,0 +1,41 @@
+.title{
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-left: 3px solid rgba(200,20,20);
+}
+
+.number{
+  color: rgb(200,20,20);
+}
+
+.reply_item{
+  padding: 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+
+.img{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.reply_content{
+  margin-left: 50px;
+}
+
+.user_name{
+  margin-right: 10px;
+}
+
+.publish_data{
+  color: #ccc;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.right{
+  float: right;
+  height: 30px;
+  line-height: 30px;
+}

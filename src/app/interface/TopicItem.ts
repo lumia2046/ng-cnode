@@ -1,4 +1,6 @@
-import {UserInfo} from './UserInfo'
+import {UserInfo} from './UserInfo';
+import {ReplyItem} from './ReplyItem'
+
 export interface TopicItem {
   author: UserInfo;
   author_id: string;
@@ -13,4 +15,5 @@ export interface TopicItem {
   top: boolean;
   visit_count: number;
   tag?:string;
+  replies?:ReplyItem[];
 }

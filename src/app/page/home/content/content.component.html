@@ -1,6 +1,9 @@
-<app-head-bar [getTopics]='getTopics' [test]='test'></app-head-bar>
+<app-head-bar [getTopics]='getTopics'></app-head-bar>
 <div class='itemList'>
-  <app-item  *ngFor="let item of items" [info]='item'></app-item>
+  <div *ngIf='loading' class='loading'><app-loading></app-loading></div>
+  <div *ngIf='!loading && items.length'>
+    <app-item *ngFor="let item of items" [info]='item'></app-item>
+  </div>
+  <div *ngIf='!loading && !items.length' class='null'>暂无数据</div>
+
 </div>
-
-

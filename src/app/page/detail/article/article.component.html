@@ -1,0 +1,16 @@
+<h4 class='head'>
+  <img [src]='detail.author.avatar_url' class='img' />
+  <span class='user_name'>{{detail.author.loginname}}</span>
+  <span class='publish_data'>{{detail.create_at|formatData}}</span>
+  <span class='right'>#楼主</span>
+</h4>
+<div class='title'>
+  <h2>{{detail.title}}</h2>
+  <div>
+    <span>查看量 {{detail.visit_count}}</span>
+    <span>回复量 {{detail.reply_count}}</span>
+  </div>
+</div>
+<div class='content'>
+  {{detail.content}}
+</div>

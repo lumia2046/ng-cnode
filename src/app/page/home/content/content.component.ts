@@ -10,6 +10,7 @@ import { TopicItem } from '../../../interface/TopicItem'
 })
 export class ContentComponent implements OnInit {
   items: TopicItem[];
+  loading: boolean = false;
 
   constructor(private route: ActivatedRoute, private service: ContentService) { }
 
@@ -17,18 +18,14 @@ export class ContentComponent implements OnInit {
     this.getTopics()
   }
 
-  getTopics(params: object = {}): void {
-    console.log(params)
+  getTopics = (params: object = {}): void => {
+    this.loading = true
     this.service.getTopics(params).subscribe(data => {
+      this.loading = false
       this.items = data["data"]
     })
   }
 
-  test(a){
-    console.log(a)
-    this.service.getTopics({tab: 'good'}).subscribe(data => {
-      this.items = data["data"]
-    })
-  }
+
 
 }
