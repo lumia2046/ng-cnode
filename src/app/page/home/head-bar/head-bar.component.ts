@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute, ParamMap, Params } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
 import { LinkItem } from '../../../interface/LinkItem';
 
@@ -9,6 +9,9 @@ import { LinkItem } from '../../../interface/LinkItem';
   styleUrls: ['./head-bar.component.css']
 })
 export class HeadBarComponent implements OnInit {
+  @Input() getTopics: Function;
+  @Input() test: Function;
+
   items: LinkItem[] = [
     {
       link: 'all',
@@ -23,7 +26,7 @@ export class HeadBarComponent implements OnInit {
       title: '分享'
     },
     {
-      link: 'exchange',
+      link: 'ask',
       title: '问答'
     },
     {
@@ -42,15 +45,15 @@ export class HeadBarComponent implements OnInit {
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-    console.log(this.route.params)
+    console.log(this.route.snapshot.paramMap)
     //this.route.queryParamMap.pipe(map(params => params.get('session_id') || 'None'))
-    // this.route.queryParamMap.subscribe((params:Params)=>{
+    // this.route.queryParamMap.subscribe((params: Params) => {
     //   console.log(params)
-    //   this.activeLink = params["tabName"]
+    //   // this.activeLink = params["tabName"]
     // })
     // this.route.paramMap.pipe(switchMap((params: ParamMap) => {
     //   this.activeLink = params.get('tabName')
-    //   return true
+    //   return null
     // })
     // );
     // console.log(this.route.snapshot.paramMap)
@@ -59,6 +62,15 @@ export class HeadBarComponent implements OnInit {
 
   setActive(link: string) {
     this.activeLink = link;
+    console.log(this.route.snapshot.paramMap)
+    this.test('aaa')
+    // this.getTopics({ tab: link === 'all' ? null : link })
+
+    // this.route.params.subscribe((params:Params)=>{
+    //   console.log(params)
+    //   this.activeLink = params["tabName"]
+    // })
   }
+
 
 }

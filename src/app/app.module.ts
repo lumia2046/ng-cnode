@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -8,6 +9,7 @@ import { FootBarComponent } from './components/foot-bar/foot-bar.component';
 import { HeadBarComponent } from './page/home/head-bar/head-bar.component';
 import { ContentComponent } from './page/home/content/content.component';
 import { ItemComponent } from './page/home/content/item/item.component';
+import { FormatDataPipe } from './pipe/format-data.pipe';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,13 @@ import { ItemComponent } from './page/home/content/item/item.component';
     FootBarComponent,
     HeadBarComponent,
     ContentComponent,
-    ItemComponent
+    ItemComponent,
+    FormatDataPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

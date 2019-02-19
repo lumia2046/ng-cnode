@@ -1,3 +1,16 @@
-<p>
-  item works!
-</p>
+<div class='item'>
+  <img [src]='info.author.avatar_url' class='avatar'>
+  <div class='head'>
+    <p class='username'>{{info.author.loginname}}</p>
+    <p class='info'>
+      <span class='public_data'>{{info.create_at|formatData}}</span>
+      <span class='tag'>{{info.tag}}</span>
+    </p>
+  </div>
+  <h2 class='title'>{{info.title}}</h2>
+  <div class='foot'>
+    <span class='footItem'>查看量{{info.visit_count}}</span>
+    <span class='footItem'>回复量{{info.reply_count}}</span>
+    <span class='footItem'>{{info.last_reply_at|formatData}}</span>
+  </div>
+</div>
