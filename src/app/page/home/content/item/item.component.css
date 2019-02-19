@@ -1,0 +1,50 @@
+.item{
+  padding: 20px;
+  background: white;
+  margin-bottom: 20px;
+}
+
+.avatar{
+  float: left;
+  margin:2px;
+  border-radius: 50%;
+  width:38px;
+  height: 38px;
+
+}
+
+.head{
+  margin-left: 50px;
+}
+
+.public_data,.footItem{
+  color: #ccc;
+}
+
+.tag{
+  margin:0 10px;
+  color: rgb(200,20,20);
+}
+
+.title{
+  padding: 20px 0;
+  font-size: 18px;
+}
+
+.foot{
+  display: flex;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  padding-top: 20px;
+}
+
+.footItem{
+  flex: 1;
+  padding:5px;
+  text-align: center;
+  border-right: 1px solid rgba(0,0,0,0.1);
+}
+
+.footItem:nth-last-child(1){
+  border-right-color: transparent;
+}
+

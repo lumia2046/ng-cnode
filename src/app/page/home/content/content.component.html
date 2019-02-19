@@ -1,5 +1,6 @@
-<ul>
-  <li *ngFor="let item of items">
+<app-head-bar [getTopics]='getTopics' [test]='test'></app-head-bar>
+<div class='itemList'>
+  <app-item  *ngFor="let item of items" [info]='item'></app-item>
+</div>
 
-  </li>
-</ul>
+
