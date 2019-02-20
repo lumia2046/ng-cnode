@@ -1,6 +1,4 @@
-1.获取路由参数
-  constructor(private route:ActivatedRoute) { }
-  ngOnInit() {
-    this.route.params.subscribe((params:Params)=>{})
-  }
+1.angular获取路由的param,使用this.route.snapshot.paramMap时，必须在路由匹配的:param组件内部才能获取到参数，组件外部（父组件、兄弟组件）都不能获取到参数
+
+2.在使用service在不同组件传递方法时，注意使用箭头函数，否则函数内部的this会被调用者改变
 

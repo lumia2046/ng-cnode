@@ -1,5 +1,5 @@
 <app-head-bar [getTopics]='getTopics'></app-head-bar>
-<div class='itemList'>
+<div class='itemList' #itemList>
   <div *ngIf='loading' class='loading'><app-loading></app-loading></div>
   <div *ngIf='!loading && items.length'>
     <app-item *ngFor="let item of items" [info]='item'></app-item>
