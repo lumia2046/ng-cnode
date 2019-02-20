@@ -1,7 +1,5 @@
-<p>
-  detail works!
-</p>
-<div *ngIf="detail">
+<app-head [back]='true' [title]='title'></app-head>
+<div *ngIf="detail" class='detail'>
     <app-article [detail]='detail'></app-article>
     <app-reply [replies]='detail.replies'></app-reply>
 </div>

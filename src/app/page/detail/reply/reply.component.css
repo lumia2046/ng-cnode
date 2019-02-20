@@ -2,6 +2,7 @@
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   border-left: 3px solid rgba(200,20,20);
+  padding: 10px;
 }
 
 .number{
@@ -15,13 +16,20 @@
 
 
 .img{
+  float: left;
   width: 30px;
   height: 30px;
   border-radius: 50%;
+  border:1px solid #ccc;
 }
 
 .reply_content{
-  margin-left: 50px;
+  margin-left: 40px;
+}
+
+.reply_head{
+  height: 30px;
+  line-height: 30px;
 }
 
 .user_name{
@@ -38,4 +46,8 @@
   float: right;
   height: 30px;
   line-height: 30px;
+}
+
+.markdown-body{
+  padding-top: 10px;
 }

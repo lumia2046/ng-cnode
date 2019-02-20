@@ -1,29 +1,59 @@
 .head{
-  height: 60px;
-  line-height: 60px;
+  height: 50px;
+  line-height: 50px;
   padding: 0 10px;
   border-bottom: 1px solid rgba(0,0,0,0.1);
+  font-weight: normal;
 }
 
 .img{
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  margin-right: 10px;
+  border:1px solid #ccc;
+  margin: 5px 15px 5px 0px;
+  vertical-align: middle;
 }
 
+.info{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
 .user_name{
-  margin-right: 10px;
+  display: block;
+  line-height: 1.5;
 }
 
 .publish_data{
+  display: block;
+  line-height: 1.5;
   color: #ccc;
   font-size: 12px;
-  font-weight: normal;
 }
 
 .right{
   float: right;
-  height: 60px;
-  line-height: 60px;
+  height: 50px;
+  line-height: 50px;
+}
+
+.title_info{
+  padding:10px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.visit{
+  margin-right: 10px;
+}
+
+.visit,.reply{
+  font-size: 12px;
+  color: #ccc;
+}
+
+.markdown-body{
+  padding: 10px;
 }

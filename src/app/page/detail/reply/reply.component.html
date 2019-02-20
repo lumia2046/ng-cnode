@@ -12,8 +12,7 @@
         <span class='publish_data'>{{item.create_at|formatData}}</span>
         <span class='right'>#楼主</span>
       </div>
-      <div class='reply_content'>
-        {{item.content}}
+      <div class='markdown-body' [innerHTML]='item.content'>
       </div>
     </div>
   </li>

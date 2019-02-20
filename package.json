@@ -27,6 +27,7 @@
     "@angular/upgrade": "^7.0.0",
     "angular-in-memory-web-api": "^0.6.0",
     "core-js": "^2.5.4",
+    "github-markdown-css": "^3.0.1",
     "moment": "^2.24.0",
     "querystring": "^0.2.0",
     "rxjs": "^6.3.0",

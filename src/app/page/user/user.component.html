@@ -1,0 +1,23 @@
+<app-head [back]='true' [title]="userInfo?(userInfo.loginname+' - 个人资料'):'加载中'"></app-head>
+<div *ngIf="userInfo" class='userInfo'>
+  <img [src]='userInfo.avatar_url' class='bigImg'>
+  <div class='info'>
+    <span class='infoItem'>积分：{{userInfo.score}}</span>
+    <span class='infoItem'>GitHub：{{userInfo.githubUsername}}</span>
+    <span class='infoItem'>注册于：{{userInfo.create_at|formatData}}</span>
+  </div>
+  <div class='navBar'>
+    <span class='navItem' [class.active]='type===0' (click)='handleClick(0)'>回复</span>
+    <span class='navItem' [class.active]='type===1' (click)='handleClick(1)'>主题</span>
+  </div>
+  <div *ngFor="let item of items" class='topicItem' (click)='goToDetail(item.id)'>
+    <img class='navImg' [src]='item.author.avatar_url'/>
+    <div class='navRight'>
+      <div class='navInfo'>
+        <span class='navUserName'>{{item.author.loginname}}</span>
+        <span class='navTime'>{{item.last_reply_at|formatData}}</span>
+      </div>
+      <div class='navContent'>{{item.title}}</div>
+    </div>
+  </div>
+</div>

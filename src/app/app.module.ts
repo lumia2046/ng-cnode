@@ -17,6 +17,8 @@ import { DetailComponent } from './page/detail/detail.component';
 import { HeaderBarComponent } from './components/header-bar/header-bar.component';
 import { ReplyComponent } from './page/detail/reply/reply.component';
 import { ArticleComponent } from './page/detail/article/article.component';
+import { HeadComponent } from './components/head/head.component';
+import { UserComponent } from './page/user/user.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { ArticleComponent } from './page/detail/article/article.component';
     DetailComponent,
     HeaderBarComponent,
     ReplyComponent,
-    ArticleComponent
+    ArticleComponent,
+    HeadComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,

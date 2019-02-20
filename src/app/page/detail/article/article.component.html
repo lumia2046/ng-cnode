@@ -1,16 +1,17 @@
 <h4 class='head'>
-  <img [src]='detail.author.avatar_url' class='img' />
-  <span class='user_name'>{{detail.author.loginname}}</span>
-  <span class='publish_data'>{{detail.create_at|formatData}}</span>
+  <img [src]='detail.author.avatar_url' class='img' (click)='imgClick(detail.author.loginname)'/>
+  <span class='info'>
+    <span class='user_name'>{{detail.author.loginname}}</span>
+    <span class='publish_data'>{{detail.create_at|formatData}}</span>
+  </span>
   <span class='right'>#楼主</span>
 </h4>
-<div class='title'>
-  <h2>{{detail.title}}</h2>
+<div class='title_info'>
+  <h2 class='title' >{{detail.title}}</h2>
   <div>
-    <span>查看量 {{detail.visit_count}}</span>
-    <span>回复量 {{detail.reply_count}}</span>
+    <span class='visit'>查看量 {{detail.visit_count}}</span>
+    <span class='reply'>回复量 {{detail.reply_count}}</span>
   </div>
 </div>
-<div class='content'>
-  {{detail.content}}
+<div class='markdown-body' [innerHTML]='detail.content'>
 </div>

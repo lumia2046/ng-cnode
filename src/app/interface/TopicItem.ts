@@ -3,17 +3,17 @@ import {ReplyItem} from './ReplyItem'
 
 export interface TopicItem {
   author: UserInfo;
-  author_id: string;
-  content: string;
-  create_at: string;
-  good: boolean;
+  title: string;
   id: string;
   last_reply_at: string;
-  reply_count: number;
-  tab: string;
-  title: string;
-  top: boolean;
-  visit_count: number;
+  author_id?: string;
+  content?: string;
+  create_at?: string;
+  good?: boolean;
+  reply_count?: number;
+  tab?: string;
+  top?: boolean;
+  visit_count?: number;
   tag?:string;
   replies?:ReplyItem[];
 }

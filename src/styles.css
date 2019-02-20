@@ -1,7 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-body, p, h1, h2, h3, h4, ul, li, tbody, thead, tr, td, head, footer, aside, article {
+@import '../node_modules/github-markdown-css/github-markdown.css';
+
+body, p, h1, h2, h3, h4, ul, li, tbody, thead, tr, td, head, footer, aside, article, span, a {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 

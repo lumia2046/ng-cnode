@@ -1,0 +1,7 @@
+.detail{
+  position: absolute;
+  top:51px;
+  bottom: 0;
+  width:100%;
+  overflow: auto;
+}
