@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
@@ -19,6 +20,7 @@ import { ReplyComponent } from './page/detail/reply/reply.component';
 import { ArticleComponent } from './page/detail/article/article.component';
 import { HeadComponent } from './components/head/head.component';
 import { UserComponent } from './page/user/user.component';
+import { LoginComponent } from './page/login/login.component';
 
 @NgModule({
   declarations: [
@@ -37,12 +39,14 @@ import { UserComponent } from './page/user/user.component';
     ReplyComponent,
     ArticleComponent,
     HeadComponent,
-    UserComponent
+    UserComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

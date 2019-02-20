@@ -23,24 +23,26 @@ export class ContentComponent implements OnInit {
       const { scrollTop, scrollHeight, offsetHeight } = e.target
       if (scrollTop + offsetHeight > scrollHeight - 100 && !this.loading) {
         const link = this.route.snapshot.paramMap.get('tabName')
-        this.getTopics({ tab: link === 'all' ? null : link, page: ++this.page }, true)
+        this.getTopics({ tab: link === 'all' ? null : link }, true)
       }
     }
   }
 
   getTopics = (params: object = {}, add?: boolean): void => {
-    if(!add){
-      this.loading = true
+    this.loading = true
+    if(add){
+      this.page++
+    }else{
+      this.page = 1
     }
-
+    params['page'] = this.page
     this.service.getTopics(params).subscribe(data => {
       this.loading = false
-      if(add){
-        this.items = [...this.items,...data["data"]]
-      }else{
+      if (add) {
+        this.items = [...this.items, ...data["data"]]
+      } else {
         this.items = [...data["data"]]
       }
-
     })
   }
 

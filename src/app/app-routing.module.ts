@@ -6,7 +6,8 @@ import { ContentComponent } from './page/home/content/content.component';
 import { PublishComponent } from './page/publish/publish.component';
 import { ProfileComponent } from './page/profile/profile.component';
 import { DetailComponent } from './page/detail/detail.component';
-import { UserComponent } from './page/user/user.component'
+import { UserComponent } from './page/user/user.component';
+import {LoginComponent} from './page/login/login.component'
 
 const route: Route[] = [
   {
@@ -34,6 +35,10 @@ const route: Route[] = [
   {
     path: 'profile',
     component: ProfileComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   },
   {
     path: 'user/:name',

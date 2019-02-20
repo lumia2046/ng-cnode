@@ -8,4 +8,5 @@ export interface UserInfo {
   recent_replies?: TopicItem[];
   recent_topics?: TopicItem[];
   score?: number;
+  success?:boolean;
 }
