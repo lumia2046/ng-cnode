@@ -1,0 +1,28 @@
+.login{
+  display: block;
+  margin: 200px auto;
+  padding: 5px 10px;
+}
+
+.publish{
+  position: absolute;
+  top:51px;
+  bottom: 51px;
+  width: 100%;
+  overflow: auto;
+}
+
+.input{
+  display: block;
+  width: 100%;
+}
+
+.select{
+  display: block;
+  width: 100%;
+}
+
+.textarea{
+  display: block;
+  width: 100%;
+}

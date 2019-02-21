@@ -9,4 +9,5 @@ export interface UserInfo {
   recent_topics?: TopicItem[];
   score?: number;
   success?:boolean;
+  token?:string;
 }

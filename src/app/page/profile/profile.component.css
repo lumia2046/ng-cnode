@@ -1,0 +1,45 @@
+.not-login{
+  padding-top: 50px;
+  text-align: center;
+}
+
+.not-login-text{
+  padding: 10px 0;
+}
+
+.to-login{
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+.user-img{
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin:120px auto 20px;
+  border-radius: 50%;
+  border:1px solid #ccc;
+
+}
+
+.name{
+  margin-bottom: 80px;
+  text-align: center;
+
+}
+
+.item{
+  padding: 10px 5px;
+  border-bottom: 1px solid #ccc;
+  background: rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.item:nth-child(1){
+  border-top: 1px solid #ccc;
+}
+
+.item-right{
+  float: right;
+  transform: scaleY(1.8);
+}

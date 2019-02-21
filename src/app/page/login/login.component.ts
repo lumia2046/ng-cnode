@@ -22,10 +22,10 @@ export class LoginComponent implements OnInit {
   }
 
   submit() {
-    this.service.getUserInfo(this.token).subscribe(data => {
+    this.service.fetchUserInfo(this.token).subscribe(data => {
       if (data.success) {
         this.message = null
-        this.service.userInfo = data
+        this.service.setUserInfo({...data,token:this.token})
         // this.location.back()
         this.router.navigateByUrl('/profile')
       } else {

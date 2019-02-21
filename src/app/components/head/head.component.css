@@ -10,7 +10,7 @@
 }
 
 .back{
-  display: inline-block;
+  float:left;
   width: 50px;
   text-align: center;
   transform: scaleY(1.8);
@@ -18,14 +18,14 @@
 }
 
 .right{
-  display: inline-block;
+  float: right;
   width: 50px;
   text-align: center;
 }
 
 .title{
-  display: inline-block;
-  width:calc(100% - 100px);
+  display: block;
+  margin:0 50px;
   text-align: center;
   font-size: 18px;
   font-weight: bold;

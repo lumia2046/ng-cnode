@@ -21,6 +21,8 @@ import { ArticleComponent } from './page/detail/article/article.component';
 import { HeadComponent } from './components/head/head.component';
 import { UserComponent } from './page/user/user.component';
 import { LoginComponent } from './page/login/login.component';
+import { LogoutComponent } from './page/login/logout/logout.component';
+import { SubmitComponent } from './page/publish/submit/submit.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { LoginComponent } from './page/login/login.component';
     ArticleComponent,
     HeadComponent,
     UserComponent,
-    LoginComponent
+    LoginComponent,
+    LogoutComponent,
+    SubmitComponent
   ],
   imports: [
     BrowserModule,

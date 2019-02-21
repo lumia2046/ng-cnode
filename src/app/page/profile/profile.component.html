@@ -1,4 +1,15 @@
-<p>
-  profile works!
-</p>
+<div *ngIf='!loginService.userInfo' class='not-login'>
+  <p class='not-login-text'>您还未登陆，请先登陆！</p>
+  <button><a  class='to-login' routerLink='/login'>登陆</a></button>
+</div>
+<div *ngIf='loginService.userInfo' class='profile'>
+    <app-head title="我的">
+        <app-logout></app-logout>
+    </app-head>
+    <img [src]='loginService.userInfo.avatar_url' class='user-img'/>
+    <p class='name'>{{loginService.userInfo.loginname}}</p>
+    <p class='item'>我的消息<span class='item-right'>></span></p>
+    <p class='item' (click)='goToUser()'>我的回复<span class='item-right'>></span></p>
+</div>
+
 <app-foot-bar></app-foot-bar>

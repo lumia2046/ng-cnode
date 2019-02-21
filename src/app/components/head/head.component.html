@@ -1,5 +1,7 @@
 <div class='head'>
   <span class='back' *ngIf="back" (click)='goBack()'><</span>
+  <span class='right'>
+    <ng-content></ng-content>
+  </span>
   <span class='title'>{{title}}</span>
-  <span class='right' *ngIf="rightContent" [innerHTML]='rightContent'></span>
 </div>

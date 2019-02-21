@@ -1,4 +1,16 @@
-<p>
-  publish works!
-</p>
+<div *ngIf='!loginService.userInfo'>
+  <button><a routeLink='/login' class='login'>登陆</a></button>
+</div>
+<div *ngIf='loginService.userInfo'>
+  <app-head title="发布">
+    <app-submit [title]='title' [content]='content' [classify]='classify'></app-submit>
+  </app-head>
+  <div class='publish'>
+    <input class='input' placeholder="请输入标题" [(ngModel)]="title"/>
+    <select class='select' placeholder="请选择类型" (change)='handleSelect($event.target.value)'>
+      <option *ngFor='let item of items' [value]='item.link'>{{item.title}}</option>
+    </select>
+    <textarea class='textarea' placeholder="请输入内容" [(ngModel)]="content"></textarea>
+  </div>
+</div>
 <app-foot-bar></app-foot-bar>
