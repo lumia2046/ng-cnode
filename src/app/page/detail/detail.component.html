@@ -1,6 +1,5 @@
-<app-head [back]='true' [title]='title'></app-head>
-<div *ngIf="detail" class='detail'>
-    <app-article [detail]='detail'></app-article>
-    <app-reply [replies]='detail.replies'></app-reply>
+<app-head [back]='true' [title]='service.detail?service.detail.title:"加载中"'></app-head>
+<div *ngIf="service.detail" class='detail'>
+  <app-article [detail]='service.detail'></app-article>
+  <app-reply [replies]='service.detail.replies'></app-reply>
 </div>
-

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input} from '@angular/core';
-import {ReplyItem} from '../../../interface/ReplyItem'
+import {ReplyItem} from '../../../interface/ReplyItem';
 
 @Component({
   selector: 'app-reply',

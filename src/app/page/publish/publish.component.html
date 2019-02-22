@@ -10,7 +10,7 @@
     <select class='select' placeholder="请选择类型" (change)='handleSelect($event.target.value)'>
       <option *ngFor='let item of items' [value]='item.link'>{{item.title}}</option>
     </select>
-    <textarea class='textarea' placeholder="请输入内容" [(ngModel)]="content"></textarea>
+    <textarea rows='5' class='textarea' placeholder="请输入内容" [(ngModel)]="content"></textarea>
   </div>
 </div>
 <app-foot-bar></app-foot-bar>

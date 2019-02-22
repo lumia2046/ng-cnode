@@ -1,0 +1,17 @@
+<div class='reply_item'>
+    <img [src]='item.author.avatar_url' class='img' (click)='imgClick(item.author.loginname)'>
+    <div class='reply_content'>
+      <div class='reply_head'>
+        <span class='user_name'>{{item.author.loginname}}</span>
+        <span class='publish_data'>{{item.create_at|formatData}}</span>
+        <span class='right'>{{index+1}}楼</span>
+      </div>
+      <div class='markdown-body' [innerHTML]='item.content'>
+      </div>
+      <div class='foot'>
+          <span class='to_reply' (click)='changeShowReply()'>回复</span>
+      </div>
+      <app-input *ngIf="showReply" [replyId]='item.id'></app-input>
+    </div>
+</div>
+

@@ -3,17 +3,5 @@
   <span class='number'>{{replies.length}}</span>
   )条回复
 </p>
-<ul>
-  <li class='reply_item' *ngFor="let item of replies">
-    <img [src]='item.author.avatar_url' class='img'>
-    <div class='reply_content'>
-      <div class='reply_head'>
-        <span class='user_name'>{{item.author.loginname}}</span>
-        <span class='publish_data'>{{item.create_at|formatData}}</span>
-        <span class='right'>#楼主</span>
-      </div>
-      <div class='markdown-body' [innerHTML]='item.content'>
-      </div>
-    </div>
-  </li>
-</ul>
+<app-reply-item *ngFor="let item of replies;let i = index" [item]='item' [index]='i'></app-reply-item>
+<app-input></app-input>

@@ -23,6 +23,8 @@ import { UserComponent } from './page/user/user.component';
 import { LoginComponent } from './page/login/login.component';
 import { LogoutComponent } from './page/login/logout/logout.component';
 import { SubmitComponent } from './page/publish/submit/submit.component';
+import { InputComponent } from './page/detail/reply/input/input.component';
+import { ReplyItemComponent } from './page/detail/reply/reply-item/reply-item.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { SubmitComponent } from './page/publish/submit/submit.component';
     UserComponent,
     LoginComponent,
     LogoutComponent,
-    SubmitComponent
+    SubmitComponent,
+    InputComponent,
+    ReplyItemComponent
   ],
   imports: [
     BrowserModule,
