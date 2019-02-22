@@ -1,7 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import * as moment from 'moment';
 
-moment.locale('zh-cn')
+moment.locale('zh-cn');
 
 @Pipe({
   name: 'formatData'
