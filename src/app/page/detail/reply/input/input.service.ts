@@ -9,12 +9,10 @@ import { Observable } from 'rxjs';
 })
 export class InputService {
 
-  baseUrl = 'https://cnodejs.org/api/v1/topic'
-
   constructor(private http: HttpClient, private router: ActivatedRoute, private loginService: LoginService) { }
 
   sendReply(topicId: string, content: string, replyId?: string):Observable<any> {
-    return this.http.post<any>(`${this.baseUrl}/${topicId}/replies`, { accesstoken: this.loginService.userInfo.token, content, replyId })
+    return this.http.post<any>(`topic/${topicId}/replies`, { accesstoken: this.loginService.userInfo.token, content, replyId })
   }
 
 }

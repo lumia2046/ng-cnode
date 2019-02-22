@@ -8,12 +8,11 @@ import { TopicItem } from '../../../interface/TopicItem'
   providedIn: 'root'
 })
 export class ContentService {
-  private baseUrl = 'https://cnodejs.org/api/v1/topics'
 
   constructor(private http: HttpClient) { }
 
   getTopics(params: object): Observable<TopicItem[]> {
-    return this.http.get<TopicItem[]>(`${this.baseUrl}?${querystring.stringify(params)}`)
+    return this.http.get<TopicItem[]>(`topics/?${querystring.stringify(params)}`)
   }
 
 }

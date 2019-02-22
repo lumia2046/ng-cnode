@@ -26,6 +26,8 @@ import { SubmitComponent } from './page/publish/submit/submit.component';
 import { InputComponent } from './page/detail/reply/input/input.component';
 import { ReplyItemComponent } from './page/detail/reply/reply-item/reply-item.component';
 
+import { httpInterceptorProviders } from './http-interceptors/index';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,7 +58,9 @@ import { ReplyItemComponent } from './page/detail/reply/reply-item/reply-item.co
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    httpInterceptorProviders
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -8,14 +8,13 @@ import * as querystring from 'querystring';
   providedIn: 'root'
 })
 export class LoginService {
-  baseUrl = 'https://cnodejs.org/api/v1';
 
   userInfo: UserInfo = localStorage.getItem('userInfo') ? JSON.parse(localStorage.getItem('userInfo')) : null;
 
   constructor(private http: HttpClient) { }
 
   fetchUserInfo(accesstoken: string): Observable<UserInfo> {
-    return this.http.post<UserInfo>(`${this.baseUrl}/accesstoken`, { accesstoken })
+    return this.http.post<UserInfo>(`accesstoken`, { accesstoken })
   }
 
   setUserInfo(info: UserInfo): void {

@@ -7,14 +7,12 @@ import {TopicItem} from '../../interface/TopicItem'
   providedIn: 'root'
 })
 export class DetailService {
-
-  private baseUrl='https://cnodejs.org/api/v1/';
   protected detail:TopicItem;
 
   constructor(private http:HttpClient) { }
 
   getDetail(id:string):void{
-    this.http.get<TopicItem>(`${this.baseUrl}/topic/${id}`).subscribe(data=>{
+    this.http.get<TopicItem>(`topic/${id}`).subscribe(data=>{
       this.detail = data['data'];
     })
   }
